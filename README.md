@@ -35,7 +35,7 @@ To run the project locally you need the following tools:
 ## Install and Run Project
 
 To run locally, just clone the repository and start dockerfile:
-- Clone the project (repository: [https://github.com/robscarvalho8/currency_converter.git](https://github.com/robscarvalho8/currency_converter.git))
+- Clone the project (repository: [https://github.com/robscarvalho8/jokenpogame.git](https://github.com/robscarvalho8/jokenpogame.git))
 - Select project folder
 
 ### RUN Dockerfile
