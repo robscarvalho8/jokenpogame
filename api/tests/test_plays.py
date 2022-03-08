@@ -1,8 +1,8 @@
 import json
+import pytest
 
+@pytest.mark.order(1)
 def test_play_post_success(client, patterns_plays):
-    with client.session_transaction() as session:
-        session['plays'] = []
     response = client.post("/play", json=patterns_plays)
     assert 200 == response.status_code
     assert "Jogador - 5" == json.loads(response.data).get('winner')
