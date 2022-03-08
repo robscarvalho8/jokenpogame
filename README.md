@@ -10,6 +10,10 @@ Python 3.9 language was used as standard backend technology
 
 The framework was used [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 
+We use the [Pandas](https://pandas.pydata.org/) library to work with the data
+
+To run the tests we use [pytest](https://docs.pytest.org/en/7.0.x/)
+
 
 ## Overview
 
