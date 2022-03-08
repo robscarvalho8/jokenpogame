@@ -1,1 +1,1 @@
-from .jokenpo import play, delete_play, success, error
+from .jokenpo import play, success, error, delete_success, delete_error
