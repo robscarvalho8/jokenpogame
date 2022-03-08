@@ -46,7 +46,17 @@ To run locally, just clone the repository and start dockerfile:
 
 2 - Run Docker
 
-    $ docker run -d --name jokenpogame jokenpogame
+    $ docker run -d -p 5000:5000 --name jokenpogame jokenpogame
+
+3 - Run Tests: First entry in a docker bash:
+
+    $ docker exec -it jokenpogame bash
+
+4 - Run Tests: Second inside a docker execute:
+
+    $ pytest
+
+
 
 
 ## Directory Structure
@@ -56,6 +66,7 @@ To run locally, just clone the repository and start dockerfile:
     ├── api                          <-  The code of interest
     │   ├── models                   <- Package where the request schemas are found 
     │   ├── server                   <- Package that provider server to ../main.py
+    │   ├── tests                    <- Package where the application tests are located 
     │   └── views                    <- Package where the application endpoints are made available
     ├── Dockerfile                   <- Dockerfile to up application
     ├── main.py                      <- Code that launches the application

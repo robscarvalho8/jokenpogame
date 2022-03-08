@@ -9,6 +9,7 @@ flask-restx = "*"
 werkzeug = "*"
 pandas = "*"
 pytest = "*"
+pytest-order = "*"
 
 [dev-packages]
 

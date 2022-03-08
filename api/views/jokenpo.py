@@ -17,8 +17,6 @@ class PlayJokenpo(Resource):
     @api.response(200, 'Success Play', success)
     @api.response(400, 'Validation Error Play', error, )
     def post(self):
-        # if not session.get('plays'):
-        #     session['plays'] = []
         request = api.payload
         df_request = pd.DataFrame(request)
         df_request['play'] = df_request['play'].str.lower()
@@ -60,7 +58,7 @@ class PlayJokenpo(Resource):
 class PlayerJokenpo(Resource):
     @api.response(200, 'Success Player', delete_success)
     @api.response(400, 'Error Player', delete_error)
-    def delete( self, id ):
+    def delete(self, id):
         df_session = pd.DataFrame(session['plays'])
         try:
             if df_session[df_session['player'] == id].empty:
@@ -89,8 +87,6 @@ class EntranceJokenpo(Resource):
         except KeyError:
             return {"error": f"Entrada {id} inválido ou não cadastrado"}, 400
 
-
 @app.before_first_request
 def before_request_func():
-    if not session.get('plays'):
-        session['plays'] = []
+    session['plays'] = []

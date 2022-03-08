@@ -1,4 +1,7 @@
 from api.server.instance import server
-from api.views.jokenpo import PlayJokenpo
+from api.views.jokenpo import PlayJokenpo, PlayerJokenpo, EntranceJokenpo
 
-server.run()
+server = server.app
+
+if __name__ == '__main__':
+    server.run()
